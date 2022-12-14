@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import AbilitytoPress from './Components/AbilityToPress';
 
 function App(){
-  const [user, setUser] = useState([{Name:[], Post: []}])
 
- return(
+ const [userid, setUserid] = useState([{name: [""], post: [""]}])
+  
 
- <div>
-  <AbilitytoPress/>
+  return (
+    <div>
+         <AbilitytoPress/>
     </div>
   );
 }
