@@ -15,6 +15,7 @@ const AbilitytoPress = (props) => {
             
         };
         console.log(actualuserinput);
+        props.AbilitytoPressproperty(actualuserinput)
     }
 
      return (
