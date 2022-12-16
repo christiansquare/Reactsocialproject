@@ -1,24 +1,31 @@
-import React, { useState } from 'react';
+import React, { useImperativeHandle, useState } from 'react';
 
 
-const DisplayPostResponse = () => {
-   
+const DisplayPostResponse = (props) => {
    
    
     return ( 
         <div>
             <table>
                 <thead>
-                    <tr>Comments</tr>
+                <tr>
+                     <th>comment</th>
+                </tr>
                 </thead>
                 <tbody>
+                    {props.DisplayPostResponseProperty.map((input) => {
+                        return (
                     <tr>
-                    <button type='submit'><img src="thumbs up or thumbs down" alt="" /></button>
+                        <td>{input.name}</td>
+                        <td>{input.post}</td>
+                        <button type='submit'>thumbs up</button><button type='submit'>thumbs up</button> 
                     </tr>
+                    );
+                  })}
                 </tbody>
             </table>
         </div>
-     );
-}
- 
-export default DisplayPostResponse;
+        );
+
+ }
+    export default DisplayPostResponse;

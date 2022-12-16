@@ -4,20 +4,20 @@ import DisplayPostResponse from './Components/DisplayPostResponse';
 
 function App(){
 
- const [userid, setUserid] = useState([{name: [""], post: [""]}])
+ const [UserId, setUserId] = useState([{name: [""], post: [""]}])
   
 function actualuserinput(user){
   
-  let tempUserid = [user, ...userid]
+  let tempUserId = [user, ...UserId]
   
-  setUserid(tempUserid)
+  setUserId(tempUserId)
 }
 
 
   return (
     <div>   
          <AbilitytoPress AbilitytoPressproperty={actualuserinput}/>
-         <DisplayPostResponse DisplayPostResponseProperty={userid}/>
+         <DisplayPostResponse DisplayPostResponseProperty={UserId}/>
     </div>
   );
 }
