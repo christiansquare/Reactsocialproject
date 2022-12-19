@@ -2,14 +2,21 @@ import React, { useImperativeHandle, useState } from 'react';
 
 
 const DisplayPostResponse = (props) => {
-   
+    function HandleMySubmitButtonPlease(event) {
+        event.preventDefault();
+      
+            
+        };
+
    
     return ( 
         <div>
-            <table>
+     
+        <div onSubmit={HandleMySubmitButtonPlease}>
+            <table className='table'>
                 <thead>
                 <tr>
-                     <th>comment</th>
+                     <th>{'comment'}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -18,12 +25,13 @@ const DisplayPostResponse = (props) => {
                     <tr>
                         <td>{input.name}</td>
                         <td>{input.post}</td>
-                        <button type='submit'>thumbs up</button><button type='submit'>thumbs up</button> 
+                        <button type='submit'>thumbs up</button><button type='submit'>thumbs down</button> 
                     </tr>
                     );
                   })}
                 </tbody>
             </table>
+        </div>
         </div>
         );
 
